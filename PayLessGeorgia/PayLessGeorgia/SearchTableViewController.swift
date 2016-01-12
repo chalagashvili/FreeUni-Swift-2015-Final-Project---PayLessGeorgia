@@ -75,4 +75,21 @@ class SearchTableViewController: UITableViewController, UITextFieldDelegate {
     static func addProductToList(product: Product) {
         
     }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        print ("ki")
+        if let id = segue.identifier {
+            if id == "showProduct"{
+                if let sectionsDest = segue.destinationViewController as? ProductDetailViewController {
+                    if let twc = sender as? SearchTableViewCell {
+                        sectionsDest.product = twc.product
+                        print("oe")
+                    }
+                }
+            }
+        }
+    }
+    
+    
 }

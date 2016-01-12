@@ -97,12 +97,6 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Price" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0g-sg-7eh" userLabel="Product Price">
-                                            <rect key="frame" x="64" y="98" width="528" height="55"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KFp-xh-8oa" userLabel="Product Image">
                                             <rect key="frame" x="8" y="8" width="48" height="48"/>
                                             <constraints>
@@ -110,6 +104,12 @@
                                                 <constraint firstAttribute="width" constant="48" id="khT-16-Bjd"/>
                                             </constraints>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Price" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0g-sg-7eh" userLabel="Product Price">
+                                            <rect key="frame" x="64" y="98" width="528" height="55"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="bottomMargin" secondItem="RVP-vn-ngi" secondAttribute="bottom" constant="53" id="3lM-9Z-WhL"/>
@@ -132,6 +132,7 @@
                                     <outlet property="productImageView" destination="KFp-xh-8oa" id="Ajw-xI-FaP"/>
                                     <outlet property="productNameLabel" destination="aO9-j2-eU0" id="Ghl-oV-zJd"/>
                                     <outlet property="productPriceLabel" destination="O0g-sg-7eh" id="Yii-c2-Kql"/>
+                                    <segue destination="21D-1v-1X1" kind="showDetail" identifier="showProduct" id="mBU-QL-btn"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -303,6 +304,88 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y83-nR-cjr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1493" y="13"/>
+        </scene>
+        <!--Product Detail View Controller-->
+        <scene sceneID="TWm-E4-aIq">
+            <objects>
+                <viewController storyboardIdentifier="ProductDetail" id="21D-1v-1X1" customClass="ProductDetailViewController" customModule="PayLessGeorgia" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gUr-kd-AzO"/>
+                        <viewControllerLayoutGuide type="bottom" id="bZr-B1-Ztw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sH7-tG-0aK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Un-b1-bRH">
+                                <rect key="frame" x="20" y="106" width="252" height="125"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cds-QK-hpF">
+                                <rect key="frame" x="181" y="329" width="33" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aha-tL-tiF">
+                                <rect key="frame" x="315" y="106" width="153" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwD-FH-YIe">
+                                <rect key="frame" x="97" y="306" width="48" height="68"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnZ-XI-vM5">
+                                <rect key="frame" x="205" y="28" width="191" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufC-x5-Fg2">
+                                <rect key="frame" x="223" y="447" width="154" height="30"/>
+                                <state key="normal" title="Google This Product"/>
+                                <connections>
+                                    <action selector="googler:" destination="21D-1v-1X1" eventType="touchUpInside" id="Q1O-Ef-fzi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uwD-FH-YIe" firstAttribute="leading" secondItem="sH7-tG-0aK" secondAttribute="leadingMargin" constant="77" id="9O0-dI-Qhr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dnZ-XI-vM5" secondAttribute="trailing" constant="184" id="Bza-eC-igf"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="3Un-b1-bRH" secondAttribute="leading" id="G94-3y-4gT"/>
+                            <constraint firstItem="uwD-FH-YIe" firstAttribute="top" secondItem="3Un-b1-bRH" secondAttribute="bottom" constant="75" id="GOV-mG-PfT"/>
+                            <constraint firstItem="Cds-QK-hpF" firstAttribute="leading" secondItem="uwD-FH-YIe" secondAttribute="trailing" constant="36" id="HHk-E5-zGk"/>
+                            <constraint firstItem="Cds-QK-hpF" firstAttribute="top" secondItem="3Un-b1-bRH" secondAttribute="bottom" constant="98" id="NR4-el-5Jx"/>
+                            <constraint firstItem="ufC-x5-Fg2" firstAttribute="top" secondItem="Cds-QK-hpF" secondAttribute="bottom" constant="97" id="Prw-3k-K2B"/>
+                            <constraint firstItem="aha-tL-tiF" firstAttribute="leading" secondItem="3Un-b1-bRH" secondAttribute="trailing" constant="43" id="UcC-aY-cbQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ufC-x5-Fg2" secondAttribute="trailing" constant="203" id="Ukf-ch-rHL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aha-tL-tiF" secondAttribute="trailing" constant="112" id="Vua-t2-l40"/>
+                            <constraint firstItem="ufC-x5-Fg2" firstAttribute="top" secondItem="uwD-FH-YIe" secondAttribute="bottom" constant="73" id="eIY-4n-u8a"/>
+                            <constraint firstItem="ufC-x5-Fg2" firstAttribute="leading" secondItem="sH7-tG-0aK" secondAttribute="leadingMargin" constant="203" id="elg-jr-I4w"/>
+                            <constraint firstItem="3Un-b1-bRH" firstAttribute="top" secondItem="dnZ-XI-vM5" secondAttribute="bottom" constant="50" id="f5x-hZ-0k8"/>
+                            <constraint firstItem="dnZ-XI-vM5" firstAttribute="leading" secondItem="sH7-tG-0aK" secondAttribute="leadingMargin" constant="185" id="gw8-pj-aHe"/>
+                            <constraint firstItem="aha-tL-tiF" firstAttribute="top" secondItem="dnZ-XI-vM5" secondAttribute="bottom" constant="50" id="i9Q-JF-7ey"/>
+                            <constraint firstItem="bZr-B1-Ztw" firstAttribute="top" secondItem="ufC-x5-Fg2" secondAttribute="bottom" constant="123" id="mB6-Jj-Mxj"/>
+                            <constraint firstItem="dnZ-XI-vM5" firstAttribute="top" secondItem="gUr-kd-AzO" secondAttribute="bottom" constant="8" id="tVp-qR-4hg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detailDescription" destination="aha-tL-tiF" id="xxO-w1-9x4"/>
+                        <outlet property="detailImage" destination="3Un-b1-bRH" id="VDv-Jh-IsR"/>
+                        <outlet property="detailPrice" destination="Cds-QK-hpF" id="2mp-zG-Wcd"/>
+                        <outlet property="detailPriceChangeble" destination="Cds-QK-hpF" id="cfU-aa-ndx"/>
+                        <outlet property="detailProductImg" destination="3Un-b1-bRH" id="6df-is-hbK"/>
+                        <outlet property="detailProductName" destination="dnZ-XI-vM5" id="rih-8g-V6b"/>
+                        <outlet property="googler" destination="ufC-x5-Fg2" id="1RD-gF-cM4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Son-HD-2Ml" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1963" y="1054"/>
         </scene>
     </scenes>
 </document>
