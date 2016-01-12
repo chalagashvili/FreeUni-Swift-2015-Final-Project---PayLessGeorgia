@@ -7,25 +7,34 @@
 //
 
 import Foundation
+import UIKit
+
+var productList :[Product] = []
+
+let currencyMap = [
+    "USD" : 1.0,
+    "RUR" : 76.09,
+    "GEL" : 2.42
+]
+var prefferedCurrency: String?
 
 public class Product {
     
     public var name:String = ""
     public var desc:String = ""
-    public var img:String = ""
+    public var img:UIImage
     public var price:Float = 0
     
-    init(name: String, desc:String, img:String, price:Float) {
+    init(name: String, desc:String, img:UIImage, price:Float) {
         self.name = name
         self.desc = desc
         self.img = img
         self.price = price
     }
     
-    public func addProductToList() {
-        names.append(self.name)
-        descr.append(self.desc)
-        prices.append(Double(self.price))
+    public func addProductToList() -> Bool {
+        productList.append(self)
+        return true
     }
     
 }

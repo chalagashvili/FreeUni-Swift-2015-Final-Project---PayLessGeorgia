@@ -71,12 +71,12 @@
 				FC86A9F91C44D22400BD5FA8 /* Main.storyboard */,
 				FCEE44CF1C452C1F00674414 /* SettingsTableViewController.swift */,
 				FC86AA0D1C44F85300BD5FA8 /* SearchTableViewCell.swift */,
+				FC86AA091C44E2A300BD5FA8 /* SearchTableViewController.swift */,
 				FC86AA0F1C44F95800BD5FA8 /* Product.swift */,
 				FC86A9FC1C44D22400BD5FA8 /* Assets.xcassets */,
 				FC86A9FE1C44D22400BD5FA8 /* LaunchScreen.storyboard */,
 				FC86AA011C44D22400BD5FA8 /* Info.plist */,
 				FC86AA071C44D40A00BD5FA8 /* Reachability.swift */,
-				FC86AA091C44E2A300BD5FA8 /* SearchTableViewController.swift */,
 				FCA6777B1C4558B000A80EC8 /* ItemAddController.swift */,
 			);
 			path = PayLessGeorgia;

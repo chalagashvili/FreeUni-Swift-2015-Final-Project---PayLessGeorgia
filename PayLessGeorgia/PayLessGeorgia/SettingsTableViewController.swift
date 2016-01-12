@@ -11,12 +11,6 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
-    let currencyMap = [
-        "USD" : 1.0,
-        "RUR" : 76.09,
-        "GEL" : 2.42
-    ]
-    
     
     
 }

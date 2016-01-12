@@ -33,7 +33,7 @@ class SearchTableViewCell: UITableViewCell {
             productNameLabel?.text = product.name
             productDescLabel?.text = product.desc
             productPriceLabel?.text = "Price: \(product.price) USD"
-            
+            productImageView?.image = product.img
         }
     }
     

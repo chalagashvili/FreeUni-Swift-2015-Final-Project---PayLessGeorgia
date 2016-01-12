@@ -9,12 +9,6 @@
 import Foundation
 import UIKit
 
-var imgs = []
-var names = ["Bread", "Toni's Bread", "Water", "Coca-cola", "Shawarma"]
-var descr = ["Stone Bread", "Gios Sacxobi's Bread", "Tap water",
-    "Chkonia & Co", "Gldanis Shaurma"]
-var prices = [0.6, 0.6, 0.1, 0.9, 6.0]
-
 class SearchTableViewController: UITableViewController, UITextFieldDelegate {
     
     var searchText: String? = "" {
@@ -23,19 +17,12 @@ class SearchTableViewController: UITableViewController, UITextFieldDelegate {
         }
     }
     
+    @IBAction func refresh(sender: UIRefreshControl) {
+        sender.endRefreshing()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.title = "Title"
-        
-        let navigationBar = navigationController!.navigationBar
-        navigationBar.tintColor = UIColor.blueColor()
-        
-        let leftButton =  UIBarButtonItem(title: "Left Button", style: UIBarButtonItemStyle.Plain, target: self, action: nil)
-        let rightButton = UIBarButtonItem(title: "Right Button", style: UIBarButtonItemStyle.Plain, target: self, action: nil)
-        
-        navigationItem.leftBarButtonItem = leftButton
-        navigationItem.rightBarButtonItem = rightButton
     }
     
     @IBOutlet weak var searchTextField: UITextField! {
@@ -56,14 +43,14 @@ class SearchTableViewController: UITableViewController, UITextFieldDelegate {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return names.count
+        return productList.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.CellReuseIdentifier, forIndexPath: indexPath) as! SearchTableViewCell
         
-        cell.product = Product(name: names[indexPath.row], desc: descr[indexPath.row], img: "", price: Float(prices[indexPath.row]))
+        cell.product = productList[indexPath.row]
         
         return cell
     }
