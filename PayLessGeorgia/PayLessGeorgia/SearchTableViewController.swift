@@ -15,6 +15,7 @@ class SearchTableViewController: UITableViewController, UITextFieldDelegate {
     let names = ["Bread", "Toni's Bread", "Water", "Coca-cola", "Shawarma"]
     let descr = ["Stone Bread", "Gios Sacxobi's Bread", "Tap water",
                  "Chkonia & Co", "Gldanis Shaurma"]
+    let prices = [0.6, 0.6, 0.1, 0.9, 6.0]
     
     var searchText: String? = "" {
         didSet {
@@ -40,14 +41,14 @@ class SearchTableViewController: UITableViewController, UITextFieldDelegate {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return names.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.CellReuseIdentifier, forIndexPath: indexPath) as! SearchTableViewCell
         
-        cell.product = Product(name: names[indexPath.row], desc: descr[indexPath.row], img: "", price: 4)
+        cell.product = Product(name: names[indexPath.row], desc: descr[indexPath.row], img: "", price: Float(prices[indexPath.row]))
         
         return cell
     }

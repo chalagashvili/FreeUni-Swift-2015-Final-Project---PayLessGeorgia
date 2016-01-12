@@ -28,7 +28,7 @@ class SearchTableViewCell: UITableViewCell {
         productImageView?.image = nil
         productDescLabel?.text = nil
         productPriceLabel?.text = nil
-        
+        	
         if let product = self.product {
             productNameLabel?.text = product.name
             productDescLabel?.text = product.desc

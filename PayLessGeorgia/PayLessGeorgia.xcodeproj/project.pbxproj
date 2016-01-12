@@ -16,6 +16,7 @@
 		FC86AA0A1C44E2A300BD5FA8 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86AA091C44E2A300BD5FA8 /* SearchTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		FC86AA0E1C44F85300BD5FA8 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86AA0D1C44F85300BD5FA8 /* SearchTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		FC86AA101C44F95800BD5FA8 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86AA0F1C44F95800BD5FA8 /* Product.swift */; settings = {ASSET_TAGS = (); }; };
+		FCEE44D01C452C1F00674414 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEE44CF1C452C1F00674414 /* SettingsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		FC86AA091C44E2A300BD5FA8 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		FC86AA0D1C44F85300BD5FA8 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		FC86AA0F1C44F95800BD5FA8 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		FCEE44CF1C452C1F00674414 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				FC86A9F51C44D22400BD5FA8 /* AppDelegate.swift */,
 				FC86A9F71C44D22400BD5FA8 /* StartViewController.swift */,
 				FC86A9F91C44D22400BD5FA8 /* Main.storyboard */,
+				FCEE44CF1C452C1F00674414 /* SettingsViewController.swift */,
 				FC86AA0D1C44F85300BD5FA8 /* SearchTableViewCell.swift */,
 				FC86AA0F1C44F95800BD5FA8 /* Product.swift */,
 				FC86A9FC1C44D22400BD5FA8 /* Assets.xcassets */,
@@ -148,6 +151,7 @@
 			files = (
 				FC86A9F81C44D22400BD5FA8 /* StartViewController.swift in Sources */,
 				FC86A9F61C44D22400BD5FA8 /* AppDelegate.swift in Sources */,
+				FCEE44D01C452C1F00674414 /* SettingsViewController.swift in Sources */,
 				FC86AA0A1C44E2A300BD5FA8 /* SearchTableViewController.swift in Sources */,
 				FC86AA081C44D40A00BD5FA8 /* Reachability.swift in Sources */,
 				FC86AA0E1C44F85300BD5FA8 /* SearchTableViewCell.swift in Sources */,
@@ -301,6 +305,7 @@
 				FC86AA061C44D22400BD5FA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

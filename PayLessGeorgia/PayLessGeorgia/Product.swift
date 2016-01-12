@@ -13,9 +13,9 @@ public class Product {
     public var name:String = ""
     public var desc:String = ""
     public var img:String = ""
-    public var price:Int = 0
+    public var price:Float = 0
     
-    init(name: String, desc:String, img:String, price:Int) {
+    init(name: String, desc:String, img:String, price:Float) {
         self.name = name
         self.desc = desc
         self.img = img
