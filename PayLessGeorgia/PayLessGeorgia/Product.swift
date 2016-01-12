@@ -22,4 +22,10 @@ public class Product {
         self.price = price
     }
     
+    public func addProductToList() {
+        names.append(self.name)
+        descr.append(self.desc)
+        prices.append(Double(self.price))
+    }
+    
 }

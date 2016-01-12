@@ -9,18 +9,33 @@
 import Foundation
 import UIKit
 
+var imgs = []
+var names = ["Bread", "Toni's Bread", "Water", "Coca-cola", "Shawarma"]
+var descr = ["Stone Bread", "Gios Sacxobi's Bread", "Tap water",
+    "Chkonia & Co", "Gldanis Shaurma"]
+var prices = [0.6, 0.6, 0.1, 0.9, 6.0]
+
 class SearchTableViewController: UITableViewController, UITextFieldDelegate {
-    
-    let imgs = []
-    let names = ["Bread", "Toni's Bread", "Water", "Coca-cola", "Shawarma"]
-    let descr = ["Stone Bread", "Gios Sacxobi's Bread", "Tap water",
-                 "Chkonia & Co", "Gldanis Shaurma"]
-    let prices = [0.6, 0.6, 0.1, 0.9, 6.0]
     
     var searchText: String? = "" {
         didSet {
             print (searchText)
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.title = "Title"
+        
+        let navigationBar = navigationController!.navigationBar
+        navigationBar.tintColor = UIColor.blueColor()
+        
+        let leftButton =  UIBarButtonItem(title: "Left Button", style: UIBarButtonItemStyle.Plain, target: self, action: nil)
+        let rightButton = UIBarButtonItem(title: "Right Button", style: UIBarButtonItemStyle.Plain, target: self, action: nil)
+        
+        navigationItem.leftBarButtonItem = leftButton
+        navigationItem.rightBarButtonItem = rightButton
     }
     
     @IBOutlet weak var searchTextField: UITextField! {
@@ -55,5 +70,9 @@ class SearchTableViewController: UITableViewController, UITextFieldDelegate {
     
     private struct Storyboard {
         static let CellReuseIdentifier = "Product"
+    }
+    
+    static func addProductToList(product: Product) {
+        
     }
 }
