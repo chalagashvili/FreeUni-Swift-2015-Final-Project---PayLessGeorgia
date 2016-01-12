@@ -403,11 +403,50 @@
                         <outlet property="detailProductImg" destination="3Un-b1-bRH" id="6df-is-hbK"/>
                         <outlet property="detailProductName" destination="dnZ-XI-vM5" id="rih-8g-V6b"/>
                         <outlet property="googler" destination="ufC-x5-Fg2" id="1RD-gF-cM4"/>
+                        <segue destination="2d1-v5-sQl" kind="showDetail" identifier="showBigImage" id="ao0-Eq-n6u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Son-HD-2Ml" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1963" y="1054"/>
+            <point key="canvasLocation" x="-1287" y="1074"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="Sky-jA-Bz3">
+            <objects>
+                <viewController id="2d1-v5-sQl" customClass="ImageViewController" customModule="Smashtag" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8bc-K4-9F0"/>
+                        <viewControllerLayoutGuide type="bottom" id="jR1-YZ-ovD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jjz-Iu-hyJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="bKu-01-Md5">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zHi-zD-86X">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zHi-zD-86X" firstAttribute="bottom" secondItem="jR1-YZ-ovD" secondAttribute="top" id="4Wd-uE-RCT"/>
+                            <constraint firstAttribute="centerY" secondItem="bKu-01-Md5" secondAttribute="centerY" id="EGY-bF-a4r"/>
+                            <constraint firstAttribute="trailing" secondItem="zHi-zD-86X" secondAttribute="trailing" id="hdd-ms-oBs"/>
+                            <constraint firstAttribute="centerX" secondItem="bKu-01-Md5" secondAttribute="centerX" id="mw5-d9-n2p"/>
+                            <constraint firstItem="zHi-zD-86X" firstAttribute="top" secondItem="Jjz-Iu-hyJ" secondAttribute="top" id="prc-yU-6la"/>
+                            <constraint firstItem="zHi-zD-86X" firstAttribute="leading" secondItem="Jjz-Iu-hyJ" secondAttribute="leading" id="suW-ZB-AeZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="zHi-zD-86X" id="YKJ-Mr-PIl"/>
+                        <outlet property="spinner" destination="bKu-01-Md5" id="NKA-Ua-ptd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KDf-dO-9zy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1968" y="851"/>
         </scene>
     </scenes>
 </document>
