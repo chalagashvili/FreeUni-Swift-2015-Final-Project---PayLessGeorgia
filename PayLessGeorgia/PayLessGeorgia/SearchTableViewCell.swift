@@ -16,7 +16,7 @@ class SearchTableViewCell: UITableViewCell {
     @IBOutlet weak var productDescLabel: UILabel!
     @IBOutlet weak var productPriceLabel: UILabel!
     
-    var product: Product? {
+    public var product: Product? {
         didSet {
             updateUI();
         }
