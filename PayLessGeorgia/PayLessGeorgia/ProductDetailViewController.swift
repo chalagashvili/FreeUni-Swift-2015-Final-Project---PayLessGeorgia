@@ -19,6 +19,7 @@ public class ProductDetailViewController: UIViewController,SFSafariViewControlle
     
     override public func viewDidLoad() {
         super.viewDidLoad()
+        print ("Loaded")
         self.detailDescription.text = product!.desc
         self.detailPriceChangeble.text = "" + (product?.price.description)!
         self.detailProductName.text = product?.name

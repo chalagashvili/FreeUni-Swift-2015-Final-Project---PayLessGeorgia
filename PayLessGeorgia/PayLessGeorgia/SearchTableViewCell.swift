@@ -16,7 +16,7 @@ class SearchTableViewCell: UITableViewCell {
     @IBOutlet weak var productDescLabel: UILabel!
     @IBOutlet weak var productPriceLabel: UILabel!
     
-    public var product: Product? {
+    internal var product: Product? {
         didSet {
             updateUI();
         }
@@ -32,7 +32,7 @@ class SearchTableViewCell: UITableViewCell {
         if let product = self.product {
             productNameLabel?.text = product.name
             productDescLabel?.text = product.desc
-            productPriceLabel?.text = "Price: \(product.price) USD"
+            productPriceLabel?.text = "Price: \(round(Double(product.price) * Double(currencyMap[prefferedCurrency!]!) * 100) / 100.0) \(prefferedCurrency!)"
             productImageView?.image = product.img
         }
     }

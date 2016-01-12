@@ -16,6 +16,13 @@ let currencyMap = [
     "RUR" : 76.09,
     "GEL" : 2.42
 ]
+
+let currencyCountries = [
+    "RU" : "RUR",
+    "ENG" : "USD",
+    "GEO" : "GEL"
+]
+
 var prefferedCurrency: String?
 
 public class Product {

@@ -23,6 +23,10 @@
                                 <state key="normal" title="GEO">
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="setCurrency:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gd5-SK-Lkj"/>
+                                    <segue destination="6wQ-ms-sV4" kind="show" id="HQ0-N5-RgC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Sx-Xu-GIR">
                                 <rect key="frame" x="42" y="513" width="170" height="30"/>
@@ -30,6 +34,10 @@
                                 <state key="normal" title="RU">
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="setCurrency:" destination="BYZ-38-t0r" eventType="touchUpInside" id="deq-W9-8UM"/>
+                                    <segue destination="6wQ-ms-sV4" kind="show" id="GdY-mo-2PM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2D0-tV-YTz">
                                 <rect key="frame" x="215" y="513" width="170" height="30"/>
@@ -38,6 +46,7 @@
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="setCurrency:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qdv-29-dcR"/>
                                     <segue destination="6wQ-ms-sV4" kind="show" id="I0X-Zn-2Te"/>
                                 </connections>
                             </button>
@@ -61,7 +70,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-685" y="13"/>
+            <point key="canvasLocation" x="-1919" y="790"/>
         </scene>
         <!--Search Table View Controller-->
         <scene sceneID="oV2-4h-vLa">
@@ -110,12 +119,6 @@
                                                 <constraint firstAttribute="width" constant="48" id="khT-16-Bjd"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Price" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0g-sg-7eh" userLabel="Product Price">
-                                            <rect key="frame" x="64" y="98" width="528" height="55"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="bottomMargin" secondItem="RVP-vn-ngi" secondAttribute="bottom" constant="53" id="3lM-9Z-WhL"/>
@@ -269,7 +272,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="0cf-cd-yJs">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingCell" id="0cf-cd-yJs">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0cf-cd-yJs" id="rYD-f2-vje">
@@ -325,7 +328,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y83-nR-cjr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1493" y="13"/>
+            <point key="canvasLocation" x="-2775" y="790"/>
         </scene>
         <!--Product Detail View Controller-->
         <scene sceneID="TWm-E4-aIq">
@@ -339,9 +342,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Un-b1-bRH">
-                                <rect key="frame" x="20" y="106" width="252" height="125"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cds-QK-hpF">
                                 <rect key="frame" x="181" y="329" width="33" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -373,6 +373,9 @@
                                     <action selector="googler:" destination="21D-1v-1X1" eventType="touchUpInside" id="Q1O-Ef-fzi"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Un-b1-bRH">
+                                <rect key="frame" x="20" y="106" width="252" height="125"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -396,24 +399,20 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="detailDescription" destination="aha-tL-tiF" id="xxO-w1-9x4"/>
-                        <outlet property="detailImage" destination="3Un-b1-bRH" id="VDv-Jh-IsR"/>
-                        <outlet property="detailPrice" destination="Cds-QK-hpF" id="2mp-zG-Wcd"/>
-                        <outlet property="detailPriceChangeble" destination="Cds-QK-hpF" id="cfU-aa-ndx"/>
-                        <outlet property="detailProductImg" destination="3Un-b1-bRH" id="6df-is-hbK"/>
-                        <outlet property="detailProductName" destination="dnZ-XI-vM5" id="rih-8g-V6b"/>
-                        <outlet property="googler" destination="ufC-x5-Fg2" id="1RD-gF-cM4"/>
-                        <segue destination="2d1-v5-sQl" kind="showDetail" identifier="showBigImage" id="ao0-Eq-n6u"/>
+                        <outlet property="detailDescription" destination="aha-tL-tiF" id="ypz-ts-tuT"/>
+                        <outlet property="detailPriceChangeble" destination="Cds-QK-hpF" id="RUc-Wq-JU3"/>
+                        <outlet property="detailProductImg" destination="3Un-b1-bRH" id="aPO-AH-iRL"/>
+                        <outlet property="detailProductName" destination="dnZ-XI-vM5" id="HgC-4Z-S3k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Son-HD-2Ml" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1287" y="1074"/>
+            <point key="canvasLocation" x="-1919" y="2382"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="Sky-jA-Bz3">
             <objects>
-                <viewController id="2d1-v5-sQl" customClass="ImageViewController" customModule="Smashtag" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2d1-v5-sQl" customClass="ImageViewController" customModule="PayLessGeorgia" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8bc-K4-9F0"/>
                         <viewControllerLayoutGuide type="bottom" id="jR1-YZ-ovD"/>
@@ -446,7 +445,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KDf-dO-9zy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1968" y="851"/>
+            <point key="canvasLocation" x="-1103" y="2387"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="I0X-Zn-2Te"/>
+    </inferredMetricsTieBreakers>
 </document>
