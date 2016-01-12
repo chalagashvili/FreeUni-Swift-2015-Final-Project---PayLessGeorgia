@@ -18,13 +18,11 @@ public class ProductDetailViewController: UIViewController,SFSafariViewControlle
     }
     
     override public func viewDidLoad() {
-        print("uhu")
         super.viewDidLoad()
         self.detailDescription.text = product!.desc
         self.detailPriceChangeble.text = "" + (product?.price.description)!
         self.detailProductName.text = product?.name
         self.detailProductImg.image = UIImage(contentsOfFile: (product?.name)!)
-        print("yeaa")
     }
     
    
