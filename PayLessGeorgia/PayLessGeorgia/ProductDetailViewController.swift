@@ -28,7 +28,7 @@ public class ProductDetailViewController: UIViewController,SFSafariViewControlle
     
    
     @IBAction func googler(sender: UIButton) {
-        let safariVC = SFSafariViewController(URL: NSURL(string: "http://google.com"+(self.product?.name)!)!)
+        let safariVC = SFSafariViewController(URL: NSURL(string: "http://google.com/search?ie=UTF-8&q="+(self.product?.name)!)!)
         self.presentViewController(safariVC, animated: true, completion: nil)
         safariVC.delegate = self
     }

@@ -59,11 +59,6 @@ class SearchTableViewController: UITableViewController, UITextFieldDelegate {
         static let CellReuseIdentifier = "Product"
     }
     
-    static func addProductToList(product: Product) {
-        
-    }
-    
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         print ("ki")
         if let id = segue.identifier {

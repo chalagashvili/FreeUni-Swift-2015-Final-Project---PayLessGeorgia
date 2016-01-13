@@ -25,6 +25,10 @@ class StartViewController: UIViewController {
 
     let internetMsgConst = "Make sure your device is connected to the internet"
     
+    @IBAction func setCurrency(sender: UIButton) {
+        prefferedCurrency = currencyCountries[sender.titleLabel!.text!]!
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         prefferedCurrency = "USD"
