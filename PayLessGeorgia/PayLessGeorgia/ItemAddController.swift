@@ -46,6 +46,7 @@ class ItemAddController: UIViewController, UINavigationControllerDelegate, UIIma
             alert = newAlertMessage("New Product", message: "Oops... Something went wrong")
         }
         presentViewController(alert, animated: true, completion: nil)
+        self.tabBarController?.selectedIndex = 0
     }
     
     @IBAction func btnClicked(sender: AnyObject) {

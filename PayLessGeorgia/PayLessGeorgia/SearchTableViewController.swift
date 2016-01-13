@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+var needsRefresh = false
+
 class SearchTableViewController: UITableViewController, UITextFieldDelegate {
     
     var searchText: String? = "" {
@@ -18,11 +20,18 @@ class SearchTableViewController: UITableViewController, UITextFieldDelegate {
     }
     
     @IBAction func refresh(sender: UIRefreshControl) {
+        self.tableView.reloadData()
         sender.endRefreshing()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        refreshControl?.beginRefreshing()
+        refresh(refreshControl!)
+        needsRefresh = false
     }
     
     @IBOutlet weak var searchTextField: UITextField! {
