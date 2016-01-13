@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		049E14D11C468BFA00DFB968 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E14D01C468BFA00DFB968 /* ImageViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		04AE7D851C4571D500E39CEE /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE7D841C4571D500E39CEE /* ProductDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		FC57AC981C46A19600540781 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57AC971C46A19600540781 /* SearchTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		FC86A9F61C44D22400BD5FA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86A9F51C44D22400BD5FA8 /* AppDelegate.swift */; };
 		FC86A9F81C44D22400BD5FA8 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86A9F71C44D22400BD5FA8 /* StartViewController.swift */; };
 		FC86A9FB1C44D22400BD5FA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC86A9F91C44D22400BD5FA8 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		049E14D01C468BFA00DFB968 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		04AE7D841C4571D500E39CEE /* ProductDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
+		FC57AC971C46A19600540781 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		FC86A9F21C44D22400BD5FA8 /* PayLessGeorgia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PayLessGeorgia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC86A9F51C44D22400BD5FA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC86A9F71C44D22400BD5FA8 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				FC86A9F71C44D22400BD5FA8 /* StartViewController.swift */,
 				FC86A9F91C44D22400BD5FA8 /* Main.storyboard */,
 				FCEE44CF1C452C1F00674414 /* SettingsTableViewController.swift */,
+				FC57AC971C46A19600540781 /* SearchTableViewController.swift */,
 				FC86AA0D1C44F85300BD5FA8 /* SearchTableViewCell.swift */,
 				FC86AA0F1C44F95800BD5FA8 /* Product.swift */,
 				FC86A9FC1C44D22400BD5FA8 /* Assets.xcassets */,
@@ -162,6 +165,7 @@
 				FCEE44D01C452C1F00674414 /* SettingsTableViewController.swift in Sources */,
 				FC86AA081C44D40A00BD5FA8 /* Reachability.swift in Sources */,
 				FC86AA0E1C44F85300BD5FA8 /* SearchTableViewCell.swift in Sources */,
+				FC57AC981C46A19600540781 /* SearchTableViewController.swift in Sources */,
 				FCA6777C1C4558B000A80EC8 /* ItemAddController.swift in Sources */,
 				FC86AA101C44F95800BD5FA8 /* Product.swift in Sources */,
 			);

@@ -17,16 +17,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PayLessGeorgia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZ8-65-I11">
-                                <rect key="frame" x="211" y="285" width="179" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="PayLessGeorgia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZ8-65-I11">
+                                <rect key="frame" x="131" y="149" width="337" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created By Irakli Chalagashvili And Vato Tabatadze. © Tbilisi, 2015" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pt-Cr-n3N">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Created By Irakli Chalagashvili And Vato Tabatadze. © Tbilisi, 2016" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pt-Cr-n3N">
                                 <rect key="frame" x="20" y="532" width="560" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -34,10 +34,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="5pt-Cr-n3N" secondAttribute="leading" id="1NY-oj-wnl"/>
-                            <constraint firstItem="sZ8-65-I11" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="5ya-H2-2me"/>
+                            <constraint firstItem="sZ8-65-I11" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-136" id="5ya-H2-2me"/>
                             <constraint firstItem="sZ8-65-I11" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="BYI-7F-Mqj"/>
                             <constraint firstItem="5pt-Cr-n3N" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="KTl-Bs-jgR"/>
-                            <constraint firstItem="5pt-Cr-n3N" firstAttribute="top" secondItem="sZ8-65-I11" secondAttribute="bottom" constant="217" id="a5i-Mk-fYN"/>
+                            <constraint firstItem="5pt-Cr-n3N" firstAttribute="top" secondItem="sZ8-65-I11" secondAttribute="bottom" constant="353" id="a5i-Mk-fYN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5pt-Cr-n3N" secondAttribute="trailing" id="eaK-2o-gGP"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="5pt-Cr-n3N" secondAttribute="bottom" constant="20" id="yzH-zU-2s8"/>
                         </constraints>
