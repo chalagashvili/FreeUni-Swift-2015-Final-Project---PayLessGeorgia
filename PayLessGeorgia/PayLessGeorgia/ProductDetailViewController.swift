@@ -17,9 +17,21 @@ public class ProductDetailViewController: UIViewController,SFSafariViewControlle
         }
     }
     
+    
+    override public func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "Show Image" {
+                if let ivc = segue.destinationViewController as? ImageViewController {
+                    if let cell = sender as? ProductDetailViewController {
+                        ivc.img = cell.product?.img
+                    }
+                }
+        }
+    }
+
+    
+    
     override public func viewDidLoad() {
         super.viewDidLoad()
-        print ("Loaded")
         self.detailDescription.text = product!.desc
         self.detailPriceChangeble.text = "" + (product?.price.description)!
         self.detailProductName.text = product?.name
@@ -40,7 +52,10 @@ public class ProductDetailViewController: UIViewController,SFSafariViewControlle
     
     @IBOutlet weak var detailPriceChangeble: UILabel!
     
+  
+    
     @IBOutlet weak var detailProductName: UILabel!
+    
     
     @IBOutlet weak var detailDescription: UILabel!
     @IBOutlet weak var detailProductImg: UIImageView!
