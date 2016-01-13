@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Start View Controller-->
+        <!--PayLessGeorgia-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="StartViewController" customModule="PayLessGeorgia" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,10 +17,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SaF-xD-WA0">
-                                <rect key="frame" x="388" y="513" width="170" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SELECT DEFAULT CURRENCY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSn-7V-3js">
+                                <rect key="frame" x="20" y="142" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SaF-xD-WA0">
+                                <rect key="frame" x="501" y="471" width="79" height="59"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="GEO">
+                                <state key="normal" title="GEO" image="GEO">
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -28,10 +34,13 @@
                                     <segue destination="6wQ-ms-sV4" kind="show" id="HQ0-N5-RgC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Sx-Xu-GIR">
-                                <rect key="frame" x="42" y="513" width="170" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Sx-Xu-GIR">
+                                <rect key="frame" x="20" y="478" width="79" height="52"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="RU">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="79" id="3dS-RF-Myr"/>
+                                </constraints>
+                                <state key="normal" title="RU" image="RU">
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -39,10 +48,13 @@
                                     <segue destination="6wQ-ms-sV4" kind="show" id="GdY-mo-2PM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2D0-tV-YTz">
-                                <rect key="frame" x="215" y="513" width="170" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2D0-tV-YTz">
+                                <rect key="frame" x="261" y="481" width="79" height="39"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="ENG">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="79" id="Y3u-GD-tRJ"/>
+                                </constraints>
+                                <state key="normal" title="ENG" image="Eng">
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -53,20 +65,19 @@
                         </subviews>
                         <color key="backgroundColor" red="0.94091303660000003" green="0.91323961609224757" blue="0.29350072921884257" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="SaF-xD-WA0" firstAttribute="leading" secondItem="2D0-tV-YTz" secondAttribute="trailing" constant="3" id="A0o-p8-LYq"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2D0-tV-YTz" secondAttribute="bottom" constant="57" id="GTQ-J7-69D"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="SaF-xD-WA0" secondAttribute="trailing" constant="22" id="RZy-Fj-XAI"/>
-                            <constraint firstItem="4Sx-Xu-GIR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="22" id="TVD-ty-F2O"/>
-                            <constraint firstItem="2D0-tV-YTz" firstAttribute="leading" secondItem="4Sx-Xu-GIR" secondAttribute="trailing" constant="3" id="WsP-3j-gzZ"/>
-                            <constraint firstItem="SaF-xD-WA0" firstAttribute="height" secondItem="2D0-tV-YTz" secondAttribute="height" id="Xyt-lB-N7a"/>
-                            <constraint firstItem="SaF-xD-WA0" firstAttribute="width" secondItem="4Sx-Xu-GIR" secondAttribute="width" id="ZSP-Ve-VnQ"/>
-                            <constraint firstItem="2D0-tV-YTz" firstAttribute="width" secondItem="4Sx-Xu-GIR" secondAttribute="width" id="bJj-RJ-Ck7"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SaF-xD-WA0" secondAttribute="bottom" constant="57" id="lzh-E1-Pqk"/>
-                            <constraint firstItem="2D0-tV-YTz" firstAttribute="height" secondItem="4Sx-Xu-GIR" secondAttribute="height" id="pbd-gP-BVe"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4Sx-Xu-GIR" secondAttribute="bottom" constant="57" id="pm9-SK-dIb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SaF-xD-WA0" secondAttribute="bottom" constant="70" id="3D4-eX-bGl"/>
+                            <constraint firstItem="2D0-tV-YTz" firstAttribute="baseline" secondItem="SaF-xD-WA0" secondAttribute="baseline" id="5rD-NX-YQv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eSn-7V-3js" secondAttribute="trailing" id="COd-Pw-2EB"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="eSn-7V-3js" secondAttribute="leading" id="QTB-pE-sFq"/>
+                            <constraint firstItem="eSn-7V-3js" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="78" id="TTL-Eo-5zt"/>
+                            <constraint firstItem="2D0-tV-YTz" firstAttribute="centerX" secondItem="eSn-7V-3js" secondAttribute="centerX" id="fdV-Bc-H8O"/>
+                            <constraint firstItem="SaF-xD-WA0" firstAttribute="leading" secondItem="eSn-7V-3js" secondAttribute="trailing" constant="-79" id="mKZ-g5-MBl"/>
+                            <constraint firstItem="4Sx-Xu-GIR" firstAttribute="leading" secondItem="eSn-7V-3js" secondAttribute="leading" id="uyH-vT-si5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SaF-xD-WA0" secondAttribute="trailing" id="wWP-pi-mAF"/>
+                            <constraint firstItem="4Sx-Xu-GIR" firstAttribute="bottom" secondItem="SaF-xD-WA0" secondAttribute="bottom" id="xM5-Sd-N9y"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="GMa-ob-1Cf"/>
+                    <navigationItem key="navigationItem" title="PayLessGeorgia" id="GMa-ob-1Cf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -266,13 +277,13 @@
         <!--Settings Table View Controller-->
         <scene sceneID="EJQ-lP-wRC">
             <objects>
-                <tableViewController id="wa9-ef-zy2" userLabel="Settings Table View Controller" sceneMemberID="viewController">
+                <tableViewController id="wa9-ef-zy2" userLabel="Settings Table View Controller" customClass="SettingsTableViewController" customModule="PayLessGeorgia" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="bSz-lT-TSF">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingCell" id="0cf-cd-yJs">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="currency" id="0cf-cd-yJs">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0cf-cd-yJs" id="rYD-f2-vje">
@@ -295,7 +306,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="HFl-lv-eGS">
             <objects>
-                <tabBarController id="6wQ-ms-sV4" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBarController" id="6wQ-ms-sV4" sceneMemberID="viewController">
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="G7w-O8-dpR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -315,6 +326,7 @@
         <!--Navigation Controller-->
         <scene sceneID="kMr-m2-OOP">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y83-nR-cjr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0mR-9b-E31" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DcT-Y9-A2H">
@@ -326,9 +338,8 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Kto-Q5-CGd"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Y83-nR-cjr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2775" y="790"/>
+            <point key="canvasLocation" x="-2733" y="790"/>
         </scene>
         <!--Product Detail View Controller-->
         <scene sceneID="TWm-E4-aIq">
@@ -473,7 +484,10 @@
     </scenes>
     <resources>
         <image name="Currency Exchange-30" width="30" height="30"/>
+        <image name="Eng" width="80" height="39"/>
+        <image name="GEO" width="80" height="59"/>
         <image name="Plus-30" width="30" height="30"/>
+        <image name="RU" width="80" height="52"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="HQ0-N5-RgC"/>
