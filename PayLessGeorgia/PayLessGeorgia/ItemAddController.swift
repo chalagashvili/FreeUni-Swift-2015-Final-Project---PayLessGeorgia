@@ -96,6 +96,7 @@ class ItemAddController: UIViewController, UINavigationControllerDelegate, UIIma
         productDesc.text = ""
         productPrice.text = ""
         productImage.image = nil
+        UITabBar.appearance().barTintColor = UIColor.cyanColor()
     }
     
     override func didReceiveMemoryWarning() {

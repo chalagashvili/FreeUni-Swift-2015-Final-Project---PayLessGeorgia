@@ -63,7 +63,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.94091303660000003" green="0.91323961609224757" blue="0.29350072921884257" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SaF-xD-WA0" secondAttribute="bottom" constant="70" id="3D4-eX-bGl"/>
                             <constraint firstItem="2D0-tV-YTz" firstAttribute="baseline" secondItem="SaF-xD-WA0" secondAttribute="baseline" id="5rD-NX-YQv"/>
@@ -192,10 +192,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xb3-Az-xQE">
-                                <rect key="frame" x="20" y="247" width="560" height="178"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="No Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TD0-RP-l7h">
                                 <rect key="frame" x="20" y="110" width="560" height="129"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -236,6 +232,10 @@
                                     <action selector="btnClicked:" destination="skL-di-aB9" eventType="touchUpInside" id="RoW-cu-utt"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xb3-Az-xQE">
+                                <rect key="frame" x="20" y="247" width="560" height="178"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -371,13 +371,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebG-DV-L0Z">
-                                <rect key="frame" x="20" y="72" width="560" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="20" y="72" width="560" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fdU-9b-SIj">
-                                <rect key="frame" x="20" y="101" width="560" height="173"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fdU-9b-SIj">
+                                <rect key="frame" x="20" y="113" width="560" height="161"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="tp8-mL-v67" appends="YES" id="qKj-c6-kHC"/>
@@ -391,11 +391,11 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="Oxx-2T-LSN"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.56000000000000005" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="uwD-FH-YIe" secondAttribute="trailing" id="1Bp-jk-PaY"/>
                             <constraint firstItem="Abi-f2-oaj" firstAttribute="top" secondItem="fdU-9b-SIj" secondAttribute="bottom" constant="13" id="3Lx-tQ-EcB"/>
@@ -420,6 +420,7 @@
                             <constraint firstItem="ebG-DV-L0Z" firstAttribute="centerX" secondItem="sH7-tG-0aK" secondAttribute="centerX" id="yJw-ch-8Z4"/>
                         </constraints>
                     </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="detailDescription" destination="Abi-f2-oaj" id="k8k-lz-oe9"/>
                         <outlet property="detailPriceChangeble" destination="uwD-FH-YIe" id="hNU-IT-cqT"/>

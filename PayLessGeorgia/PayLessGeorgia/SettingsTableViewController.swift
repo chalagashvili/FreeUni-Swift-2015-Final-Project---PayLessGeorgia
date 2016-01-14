@@ -33,4 +33,10 @@ class SettingsTableViewController: UITableViewController {
         self.tabBarController?.selectedIndex = 0
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        UITabBar.appearance().barTintColor = UIColor.cyanColor()
+        self.tableView.backgroundColor = UIColor.lightGrayColor()
+    }
+    
 }
