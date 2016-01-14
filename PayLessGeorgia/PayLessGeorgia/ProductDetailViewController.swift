@@ -14,7 +14,6 @@ public class ProductDetailViewController: UIViewController,SFSafariViewControlle
     public var product: Product?
     
     override public func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        print(segue.identifier!)
         if segue.identifier! == "Show Image" {
                 if let ivc = segue.destinationViewController as? ImageViewController {
                     ivc.img = product?.img

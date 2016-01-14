@@ -13,10 +13,24 @@ var needsRefresh = false
 
 class SearchTableViewController: UITableViewController, UITextFieldDelegate {
     
+    var toBeDisplayed: [Product] = productList
+    
     var searchText: String? = "" {
         didSet {
-            print (searchText)
+            if searchText == "" {
+                toBeDisplayed = productList
+            } else {
+                toBeDisplayed = []
+                for product in productList {
+                    if product.name.lowercaseString.containsString(searchText!.lowercaseString) || product.desc.lowercaseString.containsString(searchText!.lowercaseString) {
+                        toBeDisplayed.append(product)
+                    }
+                }
+            }
+            self.refreshControl!.beginRefreshing()
+            refresh(self.refreshControl!)
         }
+        
     }
     
     @IBAction func refresh(sender: UIRefreshControl) {
@@ -52,14 +66,16 @@ class SearchTableViewController: UITableViewController, UITextFieldDelegate {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return productList.count
+        return toBeDisplayed.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.CellReuseIdentifier, forIndexPath: indexPath) as! SearchTableViewCell
         
-        cell.product = productList[indexPath.row]
+        print (indexPath.row)
+        print (toBeDisplayed[indexPath.row])
+        cell.product = toBeDisplayed[indexPath.row]
         
         return cell
     }
