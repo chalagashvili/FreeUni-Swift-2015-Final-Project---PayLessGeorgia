@@ -16,7 +16,7 @@ var imgUrls = [ "http://www.quinzanisbakery.com/images/bread-vienna.jpg",
                 "http://www.bmstores.co.uk/images/hpcProductImage/imgFull/118303-Coca-Cola-500ml-Pet.jpg",
                 "http://thumbs.dreamstime.com/z/kafta-shawarma-chicken-pita-wrap-roll-sandwich-traditional-arab-mid-east-food-32349304.jpg"
                 ]
-var names = ["Bread", "Toni's Bread", "Water", "Coca-cola", "Shawarma"]
+var names = ["Bread", "Toni's bread", "Water", "Coca-cola", "Shawarma"]
 var descr = ["Stone Bread", "Gios Sacxobi's Bread", "Tap water",
     "Chkonia & Co", "Gldanis Shaurma"]
 var prices = [0.6, 0.6, 0.1, 0.9, 6.0]
@@ -34,7 +34,6 @@ class StartViewController: UIViewController {
         prefferedCurrency = "USD"
         if Reachability.isConnectedToNetwork() == true {
             print ("Internet connection... OK")
-            fillProductList()
         } else {
             print ("Internet connection... FAILED")
             let alert = UIAlertController(title: "Internet connection", message: internetMsgConst,
@@ -49,22 +48,6 @@ class StartViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func fillImages() {
-        for url in imgUrls {
-            if let imageData = NSData(contentsOfURL: NSURL(string: url)!) { // blocks main thread!
-                imgs.append(UIImage(data: imageData)!)
-            }
-        }
-    }
-
-    func fillProductList() {
-        fillImages()
-        for i in 0...4 {
-            let product = Product(name: names[i], desc: descr[i], img: imgs[i], price: Float(prices[i]))
-            productList.append(product)
-        }
     }
 
 }

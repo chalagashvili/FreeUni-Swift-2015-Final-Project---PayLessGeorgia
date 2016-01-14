@@ -23,10 +23,7 @@ class ItemAddController: UIViewController, UINavigationControllerDelegate, UIIma
     var imagePicker = UIImagePickerController()
     
     override func viewWillAppear(animated: Bool) {
-        productName.text = ""
-        productDesc.text = ""
-        productPrice.text = ""
-        productImage.image = nil
+        
     }
     
     func newAlertMessage(title: String!, message: String!) -> UIAlertController {
@@ -53,6 +50,30 @@ class ItemAddController: UIViewController, UINavigationControllerDelegate, UIIma
             alert = newAlertMessage("New Product", message: "Oops... Something went wrong")
         }
         presentViewController(alert, animated: true, completion: nil)
+        
+        let request = NSMutableURLRequest(URL: NSURL(string: "http://192.168.1.5:80")!)
+        request.HTTPMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        let imageData = UIImageJPEGRepresentation(productImage.image!, 0.9)
+        let base64String = imageData!.base64EncodedStringWithOptions(NSDataBase64EncodingOptions(rawValue: 0)) // encode the image
+        
+        let params = ["image":[ "content_type": "image/jpeg", "filename":"test.jpg", "file_data": base64String],
+                      "name": productName.text!,
+                      "desc": productDesc.text!,
+                      "price": productPrice.text!]
+        do {
+            request.HTTPBody = try NSJSONSerialization.dataWithJSONObject(params, options: NSJSONWritingOptions(rawValue: 0))
+        } catch _ {}
+        
+        let session = NSURLSession.sharedSession()
+        let task = session.dataTaskWithRequest(request, completionHandler: { data, response, error -> Void in
+            let strData = NSString(data: data!, encoding: NSUTF8StringEncoding)
+            print(strData)
+        })
+        
+        task.resume()
+        
         self.tabBarController?.selectedIndex = 0
         
     }
@@ -71,6 +92,10 @@ class ItemAddController: UIViewController, UINavigationControllerDelegate, UIIma
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        productName.text = ""
+        productDesc.text = ""
+        productPrice.text = ""
+        productImage.image = nil
     }
     
     override func didReceiveMemoryWarning() {

@@ -261,6 +261,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Add Item" image="Plus-30" id="FyV-Mn-8Pp"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="chooseButton" destination="SiL-S8-U8V" id="Cky-p7-yma"/>
                         <outlet property="imageView" destination="Xb3-Az-xQE" id="HyC-C6-LTz"/>

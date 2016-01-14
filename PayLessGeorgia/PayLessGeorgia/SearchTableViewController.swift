@@ -10,21 +10,49 @@ import Foundation
 import UIKit
 
 var needsRefresh = false
+let serverURL = "http://192.168.1.5:80"
 
 class SearchTableViewController: UITableViewController, UITextFieldDelegate {
     
     var toBeDisplayed: [Product] = productList
     
+    func getJSON(urlToRequest: String) -> NSData{
+        print(urlToRequest)
+        let request =  NSURL(string: urlToRequest)!
+        return NSData(contentsOfURL: request)!
+    }
+    
+    func parseJSON(inputData: NSData) -> NSArray{
+        do {
+            let boardsDictionary = try NSJSONSerialization.JSONObjectWithData(inputData, options: NSJSONReadingOptions.MutableContainers) as! NSArray
+            return boardsDictionary
+        } catch _ {
+            
+        }
+        return NSArray()
+    }
+    
     var searchText: String? = "" {
         didSet {
             if searchText == "" {
-                toBeDisplayed = productList
+                searchText = "Most Visited"
             } else {
                 toBeDisplayed = []
-                for product in productList {
-                    if product.name.lowercaseString.containsString(searchText!.lowercaseString) || product.desc.lowercaseString.containsString(searchText!.lowercaseString) {
-                        toBeDisplayed.append(product)
-                    }
+                
+            }
+            let escapeAddr = searchText!.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+            let data = getJSON("\(serverURL)?item=\(escapeAddr!)")
+            let list = parseJSON(data)
+            for item in list {
+                let dict = item as! NSDictionary
+                let name = dict["name"] as? String
+                let desc = dict["description"] as? String
+                let imageURL : String? = dict["imageURL"] as? String
+                let priceTag = dict["price"]
+                if let imageData = NSData(contentsOfURL: NSURL(string: imageURL!)!) {
+                    let newImage = UIImage(data: imageData)!
+                    let newItem : Product = Product(name: name!, desc: desc!, img: newImage, price: (priceTag!).floatValue)
+                    toBeDisplayed.append(newItem)
                 }
             }
             self.refreshControl!.beginRefreshing()
