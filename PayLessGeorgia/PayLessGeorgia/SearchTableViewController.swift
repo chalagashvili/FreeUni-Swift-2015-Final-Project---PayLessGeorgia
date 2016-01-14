@@ -38,8 +38,13 @@ class SearchTableViewController: UITableViewController, UITextFieldDelegate {
         sender.endRefreshing()
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.backgroundColor = UIColor.clearColor()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -47,6 +52,8 @@ class SearchTableViewController: UITableViewController, UITextFieldDelegate {
         searchText = ""
         refresh(refreshControl!)
         needsRefresh = false
+        self.tableView.backgroundColor = UIColor.lightGrayColor()
+        UITabBar.appearance().barTintColor = UIColor.cyanColor()
     }
     
     

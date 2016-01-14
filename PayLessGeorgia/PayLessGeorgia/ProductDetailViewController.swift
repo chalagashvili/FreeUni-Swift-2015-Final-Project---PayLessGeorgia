@@ -26,6 +26,7 @@ public class ProductDetailViewController: UIViewController,SFSafariViewControlle
     
     override public func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.lightGrayColor()
         self.detailDescription.text = product!.desc
         self.detailPriceChangeble.text = "" + "\(round(Double((product?.price)!) * Double(currencyMap[prefferedCurrency!]!) * 100) / 100.0) \(prefferedCurrency!)"
         self.detailProductName.text = product?.name
