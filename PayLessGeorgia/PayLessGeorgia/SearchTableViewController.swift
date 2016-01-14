@@ -44,9 +44,11 @@ class SearchTableViewController: UITableViewController, UITextFieldDelegate {
     
     override func viewWillAppear(animated: Bool) {
         refreshControl?.beginRefreshing()
+        searchText = ""
         refresh(refreshControl!)
         needsRefresh = false
     }
+    
     
     @IBOutlet weak var searchTextField: UITextField! {
         didSet {
@@ -73,8 +75,6 @@ class SearchTableViewController: UITableViewController, UITextFieldDelegate {
     {
         let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.CellReuseIdentifier, forIndexPath: indexPath) as! SearchTableViewCell
         
-        print (indexPath.row)
-        print (toBeDisplayed[indexPath.row])
         cell.product = toBeDisplayed[indexPath.row]
         
         return cell

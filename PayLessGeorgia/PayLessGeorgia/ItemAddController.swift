@@ -22,6 +22,13 @@ class ItemAddController: UIViewController, UINavigationControllerDelegate, UIIma
     
     var imagePicker = UIImagePickerController()
     
+    override func viewWillAppear(animated: Bool) {
+        productName.text = ""
+        productDesc.text = ""
+        productPrice.text = ""
+        productImage.image = nil
+    }
+    
     func newAlertMessage(title: String!, message: String!) -> UIAlertController {
         let alert = UIAlertController(title: title, message: message,
             preferredStyle: UIAlertControllerStyle.Alert)
@@ -47,6 +54,7 @@ class ItemAddController: UIViewController, UINavigationControllerDelegate, UIIma
         }
         presentViewController(alert, animated: true, completion: nil)
         self.tabBarController?.selectedIndex = 0
+        
     }
     
     @IBAction func btnClicked(sender: AnyObject) {

@@ -20,8 +20,6 @@ public class ProductDetailViewController: UIViewController,SFSafariViewControlle
                 }
         }
     }
-
-    
     
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -41,10 +39,14 @@ public class ProductDetailViewController: UIViewController,SFSafariViewControlle
         }
     }
     
+    override public func viewWillAppear(animated: Bool) {
+        detailDescription.editable = false
+    }
     
    
     @IBAction func googler(sender: UIButton) {
-        let safariVC = SFSafariViewController(URL: NSURL(string: "http://google.com/search?ie=UTF-8&q="+(self.product?.name)!)!)
+        let escapeAddr = (self.product?.name)!.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+        let safariVC = SFSafariViewController(URL: NSURL(string: "http://google.com/search?ie=UTF-8&q="+escapeAddr!)!)
         self.presentViewController(safariVC, animated: true, completion: nil)
         safariVC.delegate = self
     }
