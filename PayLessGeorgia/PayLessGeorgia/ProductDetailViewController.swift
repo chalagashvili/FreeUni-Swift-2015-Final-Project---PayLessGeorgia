@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 import SafariServices
 
+
+
 public class ProductDetailViewController: UIViewController,SFSafariViewControllerDelegate{
     public var product: Product?
     
@@ -20,6 +22,7 @@ public class ProductDetailViewController: UIViewController,SFSafariViewControlle
                 }
         }
     }
+    
     
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -39,9 +42,6 @@ public class ProductDetailViewController: UIViewController,SFSafariViewControlle
         }
     }
     
-    override public func viewWillAppear(animated: Bool) {
-        detailDescription.editable = false
-    }
     
    
     @IBAction func googler(sender: UIButton) {

@@ -23,10 +23,7 @@ class ItemAddController: UIViewController, UINavigationControllerDelegate, UIIma
     var imagePicker = UIImagePickerController()
     
     override func viewWillAppear(animated: Bool) {
-        productName.text = ""
-        productDesc.text = ""
-        productPrice.text = ""
-        productImage.image = nil
+
     }
     
     func newAlertMessage(title: String!, message: String!) -> UIAlertController {
@@ -71,6 +68,10 @@ class ItemAddController: UIViewController, UINavigationControllerDelegate, UIIma
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        productName.text = ""
+        productDesc.text = ""
+        productPrice.text = ""
+        productImage.image = nil
     }
     
     override func didReceiveMemoryWarning() {
