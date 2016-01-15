@@ -39,9 +39,4 @@ public class Product {
         self.price = price
     }
     
-    public func addProductToList() -> Bool {
-        productList.append(self)
-        return true
-    }
-    
 }

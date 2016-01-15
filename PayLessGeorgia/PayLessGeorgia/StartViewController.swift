@@ -10,16 +10,7 @@ import UIKit
 import Foundation
 
 var imgs: [UIImage] = []
-var imgUrls = [ "http://www.quinzanisbakery.com/images/bread-vienna.jpg",
-                "http://img.gancxadebebi.ge/ka/gancxadebebi/Tonis-puri-GEO529174-1101776.jpg",
-                "http://www.hoax-slayer.com/images/reusing-plastic-bottle.jpg",
-                "http://www.bmstores.co.uk/images/hpcProductImage/imgFull/118303-Coca-Cola-500ml-Pet.jpg",
-                "http://thumbs.dreamstime.com/z/kafta-shawarma-chicken-pita-wrap-roll-sandwich-traditional-arab-mid-east-food-32349304.jpg"
-                ]
-var names = ["Bread", "Toni's bread", "Water", "Coca-cola", "Shawarma"]
-var descr = ["Stone Bread", "Gios Sacxobi's Bread", "Tap water",
-    "Chkonia & Co", "Gldanis Shaurma"]
-var prices = [0.6, 0.6, 0.1, 0.9, 6.0]
+let serverURL = "http://192.168.0.121:5000/"
 
 class StartViewController: UIViewController {
 

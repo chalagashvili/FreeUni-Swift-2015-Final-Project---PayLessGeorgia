@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 var needsRefresh = false
-let serverURL = "http://192.168.1.5:80"
 
 class SearchTableViewController: UITableViewController, UITextFieldDelegate {
     
@@ -19,6 +18,7 @@ class SearchTableViewController: UITableViewController, UITextFieldDelegate {
     func getJSON(urlToRequest: String) -> NSData{
         print(urlToRequest)
         let request =  NSURL(string: urlToRequest)!
+        print (request)
         return NSData(contentsOfURL: request)!
     }
     
@@ -34,11 +34,9 @@ class SearchTableViewController: UITableViewController, UITextFieldDelegate {
     
     var searchText: String? = "" {
         didSet {
+            toBeDisplayed = []
             if searchText == "" {
                 searchText = "Most Visited"
-            } else {
-                toBeDisplayed = []
-                
             }
             let escapeAddr = searchText!.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
             let data = getJSON("\(serverURL)?item=\(escapeAddr!)")
@@ -55,6 +53,7 @@ class SearchTableViewController: UITableViewController, UITextFieldDelegate {
                     toBeDisplayed.append(newItem)
                 }
             }
+            
             self.refreshControl!.beginRefreshing()
             refresh(self.refreshControl!)
         }
@@ -69,6 +68,7 @@ class SearchTableViewController: UITableViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchTextField!.text = ""
     }
     
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -77,7 +77,6 @@ class SearchTableViewController: UITableViewController, UITextFieldDelegate {
     
     override func viewWillAppear(animated: Bool) {
         refreshControl?.beginRefreshing()
-        searchText = ""
         refresh(refreshControl!)
         needsRefresh = false
         self.tableView.backgroundColor = UIColor.lightGrayColor()
