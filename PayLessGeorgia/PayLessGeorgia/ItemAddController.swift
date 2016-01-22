@@ -37,20 +37,6 @@ class ItemAddController: UIViewController, UINavigationControllerDelegate, UIIma
     }
     
     @IBAction func buttonPressed(sender: UIButton) {
-        let newOne = Product(name: productName.text!, desc: productDesc.text!, img: productImage.image!, price: (productPrice.text! as NSString).floatValue)
-    
-        
-        let added = newOne.addProductToList()
-        
-        var alert: UIAlertController
-        if added == true {
-            alert = newAlertMessage("New Product", message: "Product added successfully")
-        } else {
-            
-            alert = newAlertMessage("New Product", message: "Oops... Something went wrong")
-        }
-        presentViewController(alert, animated: true, completion: nil)
-        
         let request = NSMutableURLRequest(URL: NSURL(string: serverURL)!)
         request.HTTPMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
