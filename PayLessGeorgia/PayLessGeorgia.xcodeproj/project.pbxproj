@@ -1,0 +1,325 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		049E14D11C468BFA00DFB968 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E14D01C468BFA00DFB968 /* ImageViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		04AE7D851C4571D500E39CEE /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AE7D841C4571D500E39CEE /* ProductDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		FC57AC981C46A19600540781 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC57AC971C46A19600540781 /* SearchTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		FC86A9F61C44D22400BD5FA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86A9F51C44D22400BD5FA8 /* AppDelegate.swift */; };
+		FC86A9F81C44D22400BD5FA8 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86A9F71C44D22400BD5FA8 /* StartViewController.swift */; };
+		FC86A9FB1C44D22400BD5FA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC86A9F91C44D22400BD5FA8 /* Main.storyboard */; };
+		FC86A9FD1C44D22400BD5FA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC86A9FC1C44D22400BD5FA8 /* Assets.xcassets */; };
+		FC86AA001C44D22400BD5FA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC86A9FE1C44D22400BD5FA8 /* LaunchScreen.storyboard */; };
+		FC86AA081C44D40A00BD5FA8 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86AA071C44D40A00BD5FA8 /* Reachability.swift */; settings = {ASSET_TAGS = (); }; };
+		FC86AA0E1C44F85300BD5FA8 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86AA0D1C44F85300BD5FA8 /* SearchTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		FC86AA101C44F95800BD5FA8 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86AA0F1C44F95800BD5FA8 /* Product.swift */; settings = {ASSET_TAGS = (); }; };
+		FCA6777C1C4558B000A80EC8 /* ItemAddController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA6777B1C4558B000A80EC8 /* ItemAddController.swift */; settings = {ASSET_TAGS = (); }; };
+		FCEE44D01C452C1F00674414 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEE44CF1C452C1F00674414 /* SettingsTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		049E14D01C468BFA00DFB968 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		04AE7D841C4571D500E39CEE /* ProductDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
+		FC57AC971C46A19600540781 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		FC86A9F21C44D22400BD5FA8 /* PayLessGeorgia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PayLessGeorgia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC86A9F51C44D22400BD5FA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FC86A9F71C44D22400BD5FA8 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		FC86A9FA1C44D22400BD5FA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FC86A9FC1C44D22400BD5FA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FC86A9FF1C44D22400BD5FA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FC86AA011C44D22400BD5FA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC86AA071C44D40A00BD5FA8 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		FC86AA0D1C44F85300BD5FA8 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		FC86AA0F1C44F95800BD5FA8 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		FCA6777B1C4558B000A80EC8 /* ItemAddController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemAddController.swift; sourceTree = "<group>"; };
+		FCEE44CF1C452C1F00674414 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC86A9EF1C44D22400BD5FA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FC86A9E91C44D22400BD5FA8 = {
+			isa = PBXGroup;
+			children = (
+				FC86A9F41C44D22400BD5FA8 /* PayLessGeorgia */,
+				FC86A9F31C44D22400BD5FA8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FC86A9F31C44D22400BD5FA8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC86A9F21C44D22400BD5FA8 /* PayLessGeorgia.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC86A9F41C44D22400BD5FA8 /* PayLessGeorgia */ = {
+			isa = PBXGroup;
+			children = (
+				FC86A9F51C44D22400BD5FA8 /* AppDelegate.swift */,
+				FC86A9F71C44D22400BD5FA8 /* StartViewController.swift */,
+				FC86A9F91C44D22400BD5FA8 /* Main.storyboard */,
+				FCEE44CF1C452C1F00674414 /* SettingsTableViewController.swift */,
+				FC57AC971C46A19600540781 /* SearchTableViewController.swift */,
+				FC86AA0D1C44F85300BD5FA8 /* SearchTableViewCell.swift */,
+				FC86AA0F1C44F95800BD5FA8 /* Product.swift */,
+				FC86A9FC1C44D22400BD5FA8 /* Assets.xcassets */,
+				FC86A9FE1C44D22400BD5FA8 /* LaunchScreen.storyboard */,
+				FC86AA011C44D22400BD5FA8 /* Info.plist */,
+				FC86AA071C44D40A00BD5FA8 /* Reachability.swift */,
+				FCA6777B1C4558B000A80EC8 /* ItemAddController.swift */,
+				04AE7D841C4571D500E39CEE /* ProductDetailViewController.swift */,
+				049E14D01C468BFA00DFB968 /* ImageViewController.swift */,
+			);
+			path = PayLessGeorgia;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FC86A9F11C44D22400BD5FA8 /* PayLessGeorgia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC86AA041C44D22400BD5FA8 /* Build configuration list for PBXNativeTarget "PayLessGeorgia" */;
+			buildPhases = (
+				FC86A9EE1C44D22400BD5FA8 /* Sources */,
+				FC86A9EF1C44D22400BD5FA8 /* Frameworks */,
+				FC86A9F01C44D22400BD5FA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PayLessGeorgia;
+			productName = PayLessGeorgia;
+			productReference = FC86A9F21C44D22400BD5FA8 /* PayLessGeorgia.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC86A9EA1C44D22400BD5FA8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Vato Tabatadze";
+				TargetAttributes = {
+					FC86A9F11C44D22400BD5FA8 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+				};
+			};
+			buildConfigurationList = FC86A9ED1C44D22400BD5FA8 /* Build configuration list for PBXProject "PayLessGeorgia" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FC86A9E91C44D22400BD5FA8;
+			productRefGroup = FC86A9F31C44D22400BD5FA8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC86A9F11C44D22400BD5FA8 /* PayLessGeorgia */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FC86A9F01C44D22400BD5FA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC86AA001C44D22400BD5FA8 /* LaunchScreen.storyboard in Resources */,
+				FC86A9FD1C44D22400BD5FA8 /* Assets.xcassets in Resources */,
+				FC86A9FB1C44D22400BD5FA8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC86A9EE1C44D22400BD5FA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC86A9F81C44D22400BD5FA8 /* StartViewController.swift in Sources */,
+				FC86A9F61C44D22400BD5FA8 /* AppDelegate.swift in Sources */,
+				049E14D11C468BFA00DFB968 /* ImageViewController.swift in Sources */,
+				04AE7D851C4571D500E39CEE /* ProductDetailViewController.swift in Sources */,
+				FCEE44D01C452C1F00674414 /* SettingsTableViewController.swift in Sources */,
+				FC86AA081C44D40A00BD5FA8 /* Reachability.swift in Sources */,
+				FC86AA0E1C44F85300BD5FA8 /* SearchTableViewCell.swift in Sources */,
+				FC57AC981C46A19600540781 /* SearchTableViewController.swift in Sources */,
+				FCA6777C1C4558B000A80EC8 /* ItemAddController.swift in Sources */,
+				FC86AA101C44F95800BD5FA8 /* Product.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FC86A9F91C44D22400BD5FA8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC86A9FA1C44D22400BD5FA8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FC86A9FE1C44D22400BD5FA8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC86A9FF1C44D22400BD5FA8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FC86AA021C44D22400BD5FA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FC86AA031C44D22400BD5FA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FC86AA051C44D22400BD5FA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PayLessGeorgia/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Vato.PayLessGeorgia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FC86AA061C44D22400BD5FA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PayLessGeorgia/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Vato.PayLessGeorgia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FC86A9ED1C44D22400BD5FA8 /* Build configuration list for PBXProject "PayLessGeorgia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC86AA021C44D22400BD5FA8 /* Debug */,
+				FC86AA031C44D22400BD5FA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC86AA041C44D22400BD5FA8 /* Build configuration list for PBXNativeTarget "PayLessGeorgia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC86AA051C44D22400BD5FA8 /* Debug */,
+				FC86AA061C44D22400BD5FA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FC86A9EA1C44D22400BD5FA8 /* Project object */;
+}
